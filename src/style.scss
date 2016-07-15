@@ -1,11 +1,86 @@
+$fontcolor:  rgb(10%, 10%, 10%);
+$backgroundcolor: rgb(98%, 98%, 98%);
+
+
 body {
   font-family: "Roboto", sans-serif;
-  color: rgb(10%, 10%, 10%);
-  background: darken(white, 0.2);
+  color: $fontcolor;
+  background-color: $backgroundcolor;
   margin: 50px;
 }
 
+#main {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: #f0f0f0;
+}
 
-:fullscreen a {
-    display: flex
+@media screen and (max-width: 480px) {
+  #video-section {
+    position: absolute;
+  }
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100px;
+  box-shadow: 0px 0px 0px 0px black;
+}
+
+#search-bar {
+  margin-bottom: 20px;
+
+  input {
+    font-size: 1.5em;
+    border-radius: .25em;
+  }
+}
+
+#video-title {
+  font-family: "Helvetica";
+  font-color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#video-section {
+  display: flex;
+  margin-left: -20px;
+  padding-right: 20px;
+  background-color: #f0f0f0;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    padding: 10px;
+  }
+  li:hover {
+    background: darken( $backgroundcolor, 10% );
+  }
+
+  .vidlistitem {
+    height: 100%;
+    width: 100%;
+  }
+
+  .titlelistitem {
+    width: 100%;
+  }
+
+}
+
+#logo {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#motto {
+  margin-right: 20px;
+  width: 30%;
 }
